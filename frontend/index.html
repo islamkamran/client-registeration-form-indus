@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Contact Form | Curious Studio</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="luxury-card">
+
+            <div class="image-section">
+                <div class="luxury-image"></div>
+            </div>
+
+            <form id="contactForm" class="luxury-form">
+                <!-- <h1>Get In Touch with Our Elite Team</h1>
+                <p class="form-subtitle">Share your query and we'll find perfect solution</p> -->
+
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phoneNumber" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMethod">Preferred Contact Method *</label>
+                    <div class="select-with-icon">
+                        <i class="fas fa-comments"></i>
+                        <select id="contactMethod" name="preferredContactMethod" required>
+                            <option value="">Select an option</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Email">Email</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <div class="textarea-with-icon">
+                        <i class="fas fa-pen"></i>
+                        <textarea id="message" name="message" ></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="luxury-btn">
+                    <span class="btn-text">Register Interest</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <!-- <div class="alternative-contact">
+                <p>Prefer direct communication? <a href="mailto:hello@curiousstudio.com">hello@curiousstudio.com</a></p>
+            </div> -->
+
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="success-animation">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Submission Successful</h2>
+                <p>Thank you for your inquiry. Our elite team will contact you shortly.</p>
+                <div class="countdown">
+                    <p>Redirecting in <span id="countdown">5</span> seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

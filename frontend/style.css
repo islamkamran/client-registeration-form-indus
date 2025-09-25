@@ -1,0 +1,286 @@
+:root {
+    --primary-gold: #f8f8f8;
+    --dark-charcoal: #2C2C2C;
+    --light-ivory: #F8F5F0;
+    --medium-gray: #8A8A8A;
+    --accent-burgundy: #8B0000;
+    --transition: all 0.3s ease;
+    --black-background-button: #f8f8f8
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
+    background: linear-gradient(135deg, #1a1a1a 0%, #28282b 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--light-ivory);
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.luxury-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.logo-section {
+    padding: 30px 30px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.logo i {
+    font-size: 28px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--medium-gray);
+    letter-spacing: 1px;
+}
+
+.image-section {
+    height: 180px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://backyard.ae/wp-content/uploads/2024/10/EMAAR-1-600x600.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.luxury-form {
+    padding: 30px;
+}
+
+.luxury-form h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--primary-gold);
+    text-align: center;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: var(--medium-gray);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--light-ivory);
+}
+
+.input-with-icon, .select-with-icon, .textarea-with-icon {
+    position: relative;
+}
+
+.input-with-icon i, .select-with-icon i, .textarea-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-gold);
+    z-index: 1;
+}
+
+.textarea-with-icon i {
+    top: 20px;
+    transform: none;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--light-ivory);
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--medium-gray);
+}
+
+.luxury-btn {
+    width: 100%;
+    padding: 18px;
+    /* background: linear-gradient(135deg, var(--primary-gold) 0%, #B8860B 100%); */
+    background: linear-gradient(135deg, var(--black-background-button));
+    border: none;
+    border-radius: 10px;
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.luxury-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.alternative-contact {
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+.alternative-contact a {
+    color: var(--primary-gold);
+    text-decoration: none;
+}
+
+.footer {
+    padding: 20px 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    color: var(--medium-gray);
+}
+
+.network {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Success Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.success-animation i {
+    font-size: 60px;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-gold);
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.countdown {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+}
+
+.countdown span {
+    font-weight: bold;
+    color: var(--primary-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .luxury-form {
+        padding: 20px;
+    }
+    
+    .luxury-form h1 {
+        font-size: 24px;
+    }
+}
