@@ -78,7 +78,26 @@ body {
 }
 
 .luxury-form {
-    padding: 30px;
+    padding: 25px;
+}
+
+/* New Intro Text Styles */
+.intro-text {
+    /* background: rgba(212, 175, 55, 0.1); */
+    background: rgb(78 78 72 / 25%);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    /* border-left: 4px solid var(--primary-gold); */
+}
+
+.intro-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--light-ivory);
+    text-align: center;
+    margin: 0;
+    font-style: italic;
 }
 
 .luxury-form h1 {
@@ -282,5 +301,14 @@ input::placeholder, textarea::placeholder {
     
     .luxury-form h1 {
         font-size: 24px;
+    }
+    
+    .intro-text {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .intro-text p {
+        font-size: 13px;
     }
 }
