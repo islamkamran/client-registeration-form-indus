@@ -30,12 +30,18 @@ app.add_middleware(
 # Get the absolute path to the frontend directory
 BASE_DIR = Path(__file__).resolve().parent
 FRONTEND_DIR = BASE_DIR / "../frontend"
+UPLOADS_DIR = BASE_DIR / "../uploads"  # Add this line
 
 print(f"Frontend directory: {FRONTEND_DIR}")
 print(f"Frontend exists: {FRONTEND_DIR.exists()}")
+print(f"Uploads directory: {UPLOADS_DIR}")  # Add this
+print(f"Uploads exists: {UPLOADS_DIR.exists()}")  # Add this
 
 # Serve static files (CSS, JS)
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
+
+# ADD THIS - Serve uploaded images
+app.mount("/uploads", StaticFiles(directory=UPLOADS_DIR), name="uploads")
 
 @app.get("/", response_class=FileResponse)
 async def serve_form():
